@@ -4,3 +4,4 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a592b50c86af19b8f6f4/maintainability)](https://codeclimate.com/github/NatShulga/frontend-project-44/maintainability)
 
+https://asciinema.org/a/6PhPJA7sFwmyner6KNSnuOjD2
