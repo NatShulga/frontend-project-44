@@ -4,8 +4,7 @@
 import greetUser from "../src/cli.js";
 greetUser();
 
-import readlineSync from "../bin/brain-even.js"
+import readlineSync from "../bin/brain-even.js";
 readlineSync();
 
-import readlineSync from "readline-sync";
 

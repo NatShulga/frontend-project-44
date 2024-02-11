@@ -5,3 +5,10 @@ rules:
     - ignorePackages
     - js: always
   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+
+extends:
+  - "airbnb-base"
+env:
+node: true
+browser: true
+
