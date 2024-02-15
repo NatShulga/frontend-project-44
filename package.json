@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code",
+  "name": "exit",
   "version": "0.0.1",
   "type": "module",
   "description": "[![Actions Status](https://github.com/NatShulga/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NatShulga/frontend-project-44/actions)",
@@ -16,7 +16,7 @@
   "repository": {
     "url": "git+https://github.com/NatShulga/frontend-project-44.git"
   },
-  "author": "",
+  "author": "cle",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NatShulga/frontend-project-44/issues"
