@@ -7,3 +7,5 @@
 brain-even https://asciinema.org/a/6PhPJA7sFwmyner6KNSnuOjD2
 
 brain-calc https://asciinema.org/a/j8U1TXA0HOIifcPiXOZZ10Lh3
+
+//нет аскинемы к brain-gcd ошибка модуля
