@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 
-const gcdGame = () => {
+export const gcdGame = () => {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${name}!`);
@@ -48,5 +48,4 @@ const getGreatestCommonDivisor = (number1, number2) => {
   return number1;
 };
 
-export {gcdGame};
-export default readlineSync;
+export default gcdGame;
