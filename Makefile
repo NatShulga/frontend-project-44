@@ -6,7 +6,7 @@ brain-calc
 	node bin/brain-calc.js
 brain-gcd
 	node bin/brain-gcd.js
-brain-gcd
+brain-progression
 	node bin/brain-progression.js
 	
 publish
