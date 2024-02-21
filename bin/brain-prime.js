@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import primeGame from "../src/games/prime-game.js";
+import primeGame from "../src/prime.js";
 primeGame();
 
-import readlineSync from "../src/games/prime-game.js";
+import readlineSync from "../src/prime.js";
 readlineSync;
