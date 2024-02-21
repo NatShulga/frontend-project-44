@@ -8,5 +8,9 @@ brain-even https://asciinema.org/a/6PhPJA7sFwmyner6KNSnuOjD2
 
 brain-calc https://asciinema.org/a/j8U1TXA0HOIifcPiXOZZ10Lh3
 
-//нет аскинемы к brain-gcd ошибка модуля
+brain-gcd https://asciinema.org/a/rxpEHjFCGh8OGcQO8yPbWWjxf 
+
+brain-progression https://asciinema.org/a/JTBNhph7YpGWiMPJ8LOp9kNIU 
+
+brain-prime https://asciinema.org/a/R88KLGbGsGmSvC2zcCMrOlXWT
 
