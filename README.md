@@ -13,6 +13,3 @@ brain-gcd https://asciinema.org/a/rxpEHjFCGh8OGcQO8yPbWWjxf
 brain-progression https://asciinema.org/a/JTBNhph7YpGWiMPJ8LOp9kNIU 
 
 brain-prime https://asciinema.org/a/R88KLGbGsGmSvC2zcCMrOlXWT
-
-тра-та-та
-
