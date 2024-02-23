@@ -8,4 +8,4 @@ export default function greetUser() {
   } else {
     console.log("Hello!");
   }
-}
+};
