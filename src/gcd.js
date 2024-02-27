@@ -48,4 +48,4 @@ const getGreatestCommonDivisor = (number1, number2) => {
   return number1;
 };
 
-export default gcdGame;
+export default () => { playCalcGame(description, gcdGame) };
