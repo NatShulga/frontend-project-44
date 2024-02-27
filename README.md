@@ -5,7 +5,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a592b50c86af19b8f6f4/maintainability)](https://codeclimate.com/github/NatShulga/frontend-project-44/maintainability)
 
 Description.
+
 This project created 5 console games:
+
 1.Game: "Parity check"
 2.Game: "Calculator"
 3.Game "GCD"
@@ -13,6 +15,7 @@ This project created 5 console games:
 5. Game "Is the number prime?"
 
 Games launch commands:
+
 1.brain-even
 2.brain-calc
 3.brain-gcd
