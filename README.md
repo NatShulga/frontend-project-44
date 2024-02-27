@@ -16,7 +16,7 @@ This project created 5 console games:
 
 4.Game "Arithmetic progression"
 
-5. Game "Is the number prime?"
+5.Game "Is the number prime?"
 
 Games launch commands:
 
