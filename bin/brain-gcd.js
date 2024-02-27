@@ -3,5 +3,3 @@
 import gcdGame from "../src/gcd.js";
 gcdGame();
 
-import readlineSync from "../src/gcd.js";
-readlineSync;
