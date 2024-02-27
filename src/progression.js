@@ -1,5 +1,7 @@
 import readlineSync from "readline-sync";
 
+import playCalcGame from './index.js';
+
 const generateProgression = (start, diff, length) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
@@ -60,4 +62,4 @@ const playBrainProgression = () => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export default playBrainProgression;
+export default () => { playCalcGame(description, playBrainProgression) };
