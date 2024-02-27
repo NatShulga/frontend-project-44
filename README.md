@@ -8,27 +8,27 @@ Description.
 
 This project created 5 console games:
 
-1.Game: "Parity check"
+    ~ Game: "Parity check"
 
-2.Game: "Calculator"
+    ~ Game: "Calculator"
 
-3.Game "GCD"
+    ~ Game "GCD"
 
-4.Game "Arithmetic progression"
+    ~ Game "Arithmetic progression"
 
-5.Game "Is the number prime?"
+    ~ Game "Is the number prime?"
 
 Games launch commands:
 
-1.brain-even
+    ~ brain-even
 
-2.brain-calc
+    ~ brain-calc
 
-3.brain-gcd
+    ~ brain-gcd
 
-4.brain-prime
+    ~ brain-prime
 
-5.brain-progression
+    ~ brain-progression
 
 brain-even https://asciinema.org/a/6PhPJA7sFwmyner6KNSnuOjD2
 
