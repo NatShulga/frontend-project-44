@@ -38,4 +38,4 @@ const primeGame = () => {
 
 primeGame();
 
-export default primeGame;
+export default () => { playCalcGame(description, primeGame) };
