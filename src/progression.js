@@ -57,4 +57,4 @@ const playBrainProgression = () => {
 
   console.log(`Congratulations, ${name}!`);
 };
-export default () => { playCalcGame(description, playBrainProgression) };
+export default playBrainProgression;
