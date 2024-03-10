@@ -4,7 +4,7 @@ import playCalcGame from "./index.js";
 
 const description = "Find the greatest common divisor of given numbers.";
 
-const gcdGame = () => {
+function gcdGame() {
   let correctAnswersCount = 0;
   let wrongAnswer = false;
 
@@ -29,14 +29,9 @@ const gcdGame = () => {
   if (!wrongAnswer) {
     console.log(`Congratulations!`);
   }
-};
+}
 
-const getGreatestCommonDivisor = (number1, number2) => {
-  while (number2 !== 0) {
-    [number1, number2] = [number2, number1 % number2];
-  }
-  return number1;
-};
+const getGreatestCommonDivisor = (number1, number2) => (number2 === 0 ? number1 : getGreatestCommonDivisor(number2, number1 % number2));
 
 export default () => {
   playCalcGame(description, gcdGame);
