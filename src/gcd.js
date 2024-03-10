@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 
-import playCalcGame from './index.js';
+import playCalcGame from "./index.js";
 
 const description = "Find the greatest common divisor of given numbers.";
 
@@ -10,7 +10,7 @@ function gcdGame() {
   console.log(`Hello, ${name}!`);
 
   console.log(description);
-  
+
   let correctAnswersCount = 0;
   let wrongAnswer = false;
 
@@ -52,4 +52,6 @@ const getGreatestCommonDivisor = (number1, number2) => {
   return number1;
 };
 
-export default () => { playCalcGame(description, gcdGame) };
+export default () => {
+  playCalcGame(description, gcdGame);
+};
