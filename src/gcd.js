@@ -19,8 +19,10 @@ function gcdGame() {
     const number2 = getRandomNumber();
     const correctAnswer = getGreatestCommonDivisor(number1, number2);
 
-    console.log(`Question: ${number1} ${number2}`);
-    
+    console.log("What is the result of the expression?");
+    console.log(`Question: ${number1} * ${number2}`);
+    console.log("Your answer:");
+
     const userAnswer = readlineSync.question("Your answer: ");
 
     if (Number(userAnswer) === correctAnswer) {
