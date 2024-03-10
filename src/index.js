@@ -2,6 +2,11 @@ import readlineSync from "readline-sync";
 
 
 const playCalcGame = () => {
+  console.log("Welcome to the Brain Games!");
+  const name = readlineSync.question("May I have your name? ");
+  console.log(`Hello, ${name}!`);
+  console.log("What is the result of the expression?");
+
   const operators = ["+", "-", "*"];
   const getRandomNumber = () => Math.floor(Math.random() * 100);
   const calculateExpression = (num1, num2, operator) => {
@@ -30,7 +35,6 @@ const playCalcGame = () => {
 
     console.log("Correct!");
   }
-
   console.log(`Congratulations, ${name}!`);
 };
 
