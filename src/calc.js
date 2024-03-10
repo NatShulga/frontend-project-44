@@ -1,6 +1,3 @@
-import readlineSync from "readline-sync";
-
-
 const playCalcGame = () => {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
@@ -8,14 +5,12 @@ const playCalcGame = () => {
   console.log("What is the result of the expression?");
 
   const operators = ["+", "-", "*"];
-
   const getRandomNumber = () => Math.floor(Math.random() * 100);
-
   const calculateExpression = (num1, num2, operator) => {
     const operations = {
-      '+': num1 + num2,
-      '-': num1 - num2,
-      '*': num1 * num2
+      "+": num1 + num2,
+      "-": num1 - num2,
+      "*": num1 * num2,
     };
     return operations[operator];
   };
@@ -30,7 +25,9 @@ const playCalcGame = () => {
     const userAnswer = readlineSync.question("Your answer: ");
 
     if (Number(userAnswer) !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+      );
       console.log(`Let's try again, ${name}!`);
       return;
     }
