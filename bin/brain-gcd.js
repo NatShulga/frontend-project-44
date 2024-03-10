@@ -2,4 +2,3 @@
 
 import gcdGame from "../src/gcd.js";
 gcdGame();
-
