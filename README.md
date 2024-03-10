@@ -2,7 +2,10 @@
 
 [![Actions Status](https://github.com/NatShulga/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NatShulga/frontend-project-44/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a592b50c86af19b8f6f4/maintainability)](https://codeclimate.com/github/NatShulga/frontend-project-44/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a592b50c86af19b8f6f4/maintainability)](https://codeclimate.com/github/NatShulga/frontend-project-44/maintainability) 
+
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 
 Description.
 
