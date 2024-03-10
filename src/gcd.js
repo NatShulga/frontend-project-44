@@ -2,15 +2,15 @@ import readlineSync from "readline-sync";
 
 import playCalcGame from './index.js';
 
-
+const description = "Find the greatest common divisor of given numbers.";
 
 function gcdGame() {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${name}!`);
 
-  console.log("Find the greatest common divisor of given numbers.");
-
+  console.log(description);
+  
   let correctAnswersCount = 0;
   let wrongAnswer = false;
 
