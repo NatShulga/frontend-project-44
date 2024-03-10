@@ -7,4 +7,5 @@ greetUser();
 import readlineSync from "../src/cli.js";
 readlineSync;
 
-
+import playCalcGame from "./index.js";
+playCalcGame();
