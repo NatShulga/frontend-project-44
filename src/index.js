@@ -7,7 +7,7 @@ const playCalcGame = () => {
   console.log("What is the result of the expression?");
 
   const operators = ["+", "-", "*"];
-  const getRandomOperator = () => operators[Math.floor(Math.random() * operators.length)];
+
   const getRandomNumber = () => Math.floor(Math.random() * 100);
 
   const calculateExpression = (num1, num2, operator) => {
@@ -19,10 +19,10 @@ const playCalcGame = () => {
     return operations[operator];
   };
 
-  function playRound() {
+  for (let i = 0; i < 3; i++) {
     const num1 = getRandomNumber();
     const num2 = getRandomNumber();
-    const operator = getRandomOperator();
+    const operator = operators[Math.floor(Math.random() * operators.length)];
     const correctAnswer = calculateExpression(num1, num2, operator);
 
     console.log(`Question: ${num1} ${operator} ${num2}`);
@@ -31,17 +31,10 @@ const playCalcGame = () => {
     if (Number(userAnswer) !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
-      return false;
+      return;
     }
 
     console.log("Correct!");
-    return true;
-  }
-
-  for (let i = 0; i < 3; i += 1) {
-    if (!playRound()) {
-      return;
-    }
   }
 
   console.log(`Congratulations, ${name}!`);
