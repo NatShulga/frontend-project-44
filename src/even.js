@@ -31,4 +31,4 @@ if (correctCount === 3) {
   console.log(`Congratulations, ${name}!`);
 }
 
-export default readlineSync;
+export default () => { playCalcGame(description) };
