@@ -20,6 +20,7 @@ function gcdGame() {
     const correctAnswer = getGreatestCommonDivisor(number1, number2);
 
     console.log(`Question: ${number1} ${number2}`);
+    
     const userAnswer = readlineSync.question("Your answer: ");
 
     if (Number(userAnswer) === correctAnswer) {
