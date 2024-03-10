@@ -3,18 +3,14 @@ import playCalcGame from "./index.js";
 
 const description = "Find the greatest common divisor of given numbers.";
 
-function gcdGame() {
-  let correctAnswersCount = 0;
-  let wrongAnswer = false;
-
-  while (correctAnswersCount < 3 && !wrongAnswer) {
+const gcdGame = () => {
     const number1 = generateRandomNumber(1, 100);
     const number2 = generateRandomNumber(1, 100);
     const answer = getGreatestCommonDivisor(number1, number2);
-    const expression = `${number1} ${number2}`;
-    return [expression, String(answer)];
+    const question = `${number1} ${number2}`;
+    return { description, question, answer };
   };
-};
+
 const getGreatestCommonDivisor = (number1, number2) => {
   while (number2 !== 0) {
     const temp = number2;
