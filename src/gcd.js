@@ -31,7 +31,12 @@ function gcdGame() {
   }
 }
 
-const getGreatestCommonDivisor = (number1, number2) => (number2 === 0 ? number1 : getGreatestCommonDivisor(number2, number1 % number2));
+const getGreatestCommonDivisor = (number1, number2) => {
+  while (number2 !== 0) {
+    [number1, number2] = [number2, number1 % number2];
+  }
+  return number1;
+};
 
 export default () => {
   playCalcGame(description, gcdGame);
