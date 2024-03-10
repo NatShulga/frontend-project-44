@@ -1,7 +1,6 @@
 import readlineSync from "readline-sync";
 import playCalcGame from "./index.js";
 
-
 const description = "Find the greatest common divisor of given numbers.";
 
 function gcdGame() {
@@ -13,7 +12,7 @@ function gcdGame() {
     const number2 = Math.floor(Math.random() * 100) + 1;
     const correctAnswer = getGreatestCommonDivisor(number1, number2);
 
-    const question = "Question: " + number1 + " " + number2;
+    const question = "Question: `${number1} ${number2}`";
     const userAnswer = readlineSync.question(`${question}\nYour answer: `);
 
     if (Number(userAnswer) === correctAnswer) {
@@ -30,10 +29,11 @@ function gcdGame() {
     console.log(`Congratulations!`);
   }
 }
-
 const getGreatestCommonDivisor = (number1, number2) => {
   while (number2 !== 0) {
-    [number1, number2] = [number2, number1 % number2];
+    const temp = number2;
+    number2 = number1 % number2;
+    number1 = temp;
   }
   return number1;
 };
