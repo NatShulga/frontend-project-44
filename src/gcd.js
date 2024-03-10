@@ -13,7 +13,7 @@ function gcdGame() {
     const number2 = Math.floor(Math.random() * 100) + 1;
     const correctAnswer = getGreatestCommonDivisor(number1, number2);
 
-    const question = `Question: ${number1} ${number2}`;
+    const question = `Question: 25, 50`;
     const userAnswer = readlineSync.question(`${question}\nYour answer: `);
 
     if (Number(userAnswer) === correctAnswer) {
