@@ -8,11 +8,10 @@ function gcdGame() {
   let wrongAnswer = false;
 
   while (correctAnswersCount < 3 && !wrongAnswer) {
-    const number1 = Math.floor(Math.random() * 100) + 1;
-    const number2 = Math.floor(Math.random() * 100) + 1;
+    const number1 = generateRandomNumber(1, 100);
+    const number2 = generateRandomNumber(1, 100);
     const correctAnswer = getGreatestCommonDivisor(number1, number2);
-
-    const question = "Question: `${number1} ${number2}`";
+    const question = `${number1} ${number2}`;
     const userAnswer = readlineSync.question(`${question}\nYour answer: `);
 
     if (Number(userAnswer) === correctAnswer) {
