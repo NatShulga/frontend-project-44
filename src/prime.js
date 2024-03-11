@@ -45,7 +45,7 @@ const primeGame = () => {
   }
 
   if (correctAnswersCount === 3) {
-    console.log(`Congratulations, ${Tirion}!`);
+    console.log(`Congratulations, ${name}!`);
   }
 };
 
