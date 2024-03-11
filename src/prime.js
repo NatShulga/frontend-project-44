@@ -1,5 +1,6 @@
 import readlineSync from "readline-sync";
 
+
 const isPrime = (num) => {
   if (num <= 1) {
     return false;
