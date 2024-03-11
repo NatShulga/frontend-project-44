@@ -7,8 +7,8 @@ const gcdGame = () => {
     const number1 = generateRandomNumber(1, 100);
     const number2 = generateRandomNumber(1, 100);
     const answer = getGreatestCommonDivisor(number1, number2);
-    console.log(`Question: ${number1} ${number2}`);
-    return { description, question, answer };
+    const expression = `${number1} ${number2}`;
+    return [expression, String(answer)];
   };
 
 const getGreatestCommonDivisor = (number1, number2) => {
