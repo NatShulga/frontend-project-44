@@ -16,29 +16,39 @@ const isPrime = (num) => {
 const primeGame = () => {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
-  console.log(`Hello, ${Tirion}!`);
-  console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+  console.log(`Hello, ${name}!`);
+  console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-  function askQuestion() {
+  const playRound = () => {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question("Your answer: ");
-    if (
-      (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
-      (!isPrime(randomNumber) && answer.toLowerCase() === "no")
-    ) {
+    const userAnswer = readlineSync.question("Your answer: ");
+    
+    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
+    
+    if (userAnswer.toLowerCase() === correctAnswer) {
       console.log("Correct!");
+      return true;
     } else {
-      console.log("Incorrect!");
+      console.log(`Incorrect! Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      return false;
     }
-    askQuestion();
+  };
+
+  let correctAnswersCount = 0;
+  while (correctAnswersCount < 3) {
+    if (!playRound()) {
+      break;
+    }
+    correctAnswersCount++;
   }
 
-  askQuestion();
-
-  console.log(`Congratulations, ${Tirion}!`);
+  if (correctAnswersCount === 3) {
+    console.log(`Congratulations, ${Tirion}!`);
+  }
 };
 
-export default primeGame();
+export default primeGame;
 
 
