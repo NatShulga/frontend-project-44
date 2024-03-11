@@ -34,8 +34,10 @@ const primeGame = () => {
   }
 
   askQuestion();
+
+  console.log(`Congratulations, ${name}!`);
 };
 
-primeGame();
+export default primeGame();
 
-export default () => { playCalcGame(description, primeGame) };
+
