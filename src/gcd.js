@@ -2,7 +2,7 @@
 //import playCalcGame from "./index.js"; - импорт этой функции подменяет игру
 import readlineSync from "readline-sync";
 
-const description = "Find the greatest common divisor of given numbers.";
+//const description = "Find the greatest common divisor of given numbers.";
 
 // Функция для генерации случайного числа в заданном диапазоне
 const generateRandomNumber = (min, max) => {
