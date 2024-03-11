@@ -35,7 +35,7 @@ const primeGame = () => {
 
   askQuestion();
 
-  console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${Tirion}!`);
 };
 
 export default primeGame();
