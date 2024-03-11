@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-import playBrainProgression from "../src/progression.js";
+import playBrainProgression from '../src/progression.js';
+
 playBrainProgression();
 
-import readlineSync from "../src/progression.js";
+import readlineSync from '../src/progression.js';
+
 readlineSync;
