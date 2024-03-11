@@ -33,14 +33,14 @@ Games launch commands:
 
     ~ brain-progression
 
-brain-even https://asciinema.org/a/6PhPJA7sFwmyner6KNSnuOjD2
+brain-even 
 
-brain-calc https://asciinema.org/a/j8U1TXA0HOIifcPiXOZZ10Lh3
+brain-calc 
 
-brain-gcd https://asciinema.org/a/rxpEHjFCGh8OGcQO8yPbWWjxf 
+brain-gcd  
 
-brain-progression https://asciinema.org/a/JTBNhph7YpGWiMPJ8LOp9kNIU 
+brain-progression  
 
-brain-prime https://asciinema.org/a/R88KLGbGsGmSvC2zcCMrOlXWT
+brain-prime 
 
 
