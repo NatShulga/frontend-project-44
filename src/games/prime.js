@@ -27,13 +27,20 @@ const primeGame = () => {
       (!isPrime(randomNumber) && answer.toLowerCase() === "no")
     ) {
       console.log("Correct!");
+      return true;
     } else {
       console.log("Incorrect!");
+      return false;
     }
-    askQuestion();
   }
 
-  askQuestion();
+  let correctAnswersCount = 0;
+  while (correctAnswersCount < 3) {
+    if (askQuestion()) {
+      correctAnswersCount++;
+    }
+  }
+
   console.log(`Congratulations, ${name}!`);
 };
 
