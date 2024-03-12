@@ -1,5 +1,6 @@
 import readlineSync from "readline-sync";
 
+//функция проверки числа на простоту
 const isPrime = (num) => {
   if (num <= 1) {
     return false;
@@ -12,6 +13,7 @@ const isPrime = (num) => {
   return true;
 };
 
+//функция самой игры
 const primeGame = () => {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
@@ -22,20 +24,28 @@ const primeGame = () => {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Question: ${randomNumber}`);
     const answer = readlineSync.question("Your answer: ");
-    if (
-      (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
-      (!isPrime(randomNumber) && answer.toLowerCase() === "no")
-    ) {
+    const isCorrect = (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
+                     (!isPrime(randomNumber) && answer.toLowerCase() === "no");
+    
+    if (isCorrect) {
       console.log("Correct!");
+      return true;
     } else {
       console.log("Incorrect!");
+      console.log(`Let's try again, ${name}!`);
+      return false;
     }
-    askQuestion();
-  } console.log(`Congratulations, ${name}!`);
+  }
+  let roundCount = 3;
+  while (roundCount > 0) {
+    if (!askQuestion()) {
+      roundCount = 3;
+    } else {
+      roundCount--;
+    }
+  }
 
-  askQuestion();
-
-  
+  console.log(`Congratulations, ${name}!`);
 };
 
 primeGame();
