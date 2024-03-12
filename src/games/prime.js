@@ -43,7 +43,7 @@ if (!playRound()) {
 }
 }
 
-if (wrongAnswersCount === 3) {
+if (wrongAnswersCount === 0) {
 console.log(`Congratulations, ${name}!`);
 }
 };
