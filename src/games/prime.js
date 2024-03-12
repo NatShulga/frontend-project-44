@@ -13,41 +13,40 @@ const isPrime = (num) => {
   return true;
 };
 
-//функция самой игры
 const primeGame = () => {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${name}!`);
-  console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+  console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-  function askQuestion() {
+  const playRound = () => {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question("Your answer: ");
-    const isCorrect = (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
-                     (!isPrime(randomNumber) && answer.toLowerCase() === "no");
+    const userAnswer = readlineSync.question("Your answer: ");
     
-    if (isCorrect) {
+    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
+    
+    if (userAnswer.toLowerCase() === correctAnswer) {
       console.log("Correct!");
       return true;
     } else {
-      console.log("Incorrect!");
+      console.log(`Incorrect! Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return false;
     }
-  }
-  let roundCount = 3;
-  while (roundCount > 0) {
-    if (!askQuestion()) {
-      roundCount = 3;
+  };
+
+  let correctAnswersCount = 3;
+  while (correctAnswersCount > 0) {
+    if (!playRound()) {
+      correctAnswersCount = 3;
     } else {
-      roundCount--;
+    correctAnswersCount++;
     }
   }
-
-  console.log(`Congratulations, ${name}!`);
+  if (correctAnswersCount === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
 };
 
-primeGame();
-
-export default primeGame; 
+export default primeGame;
