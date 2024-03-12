@@ -33,7 +33,7 @@ Games launch commands:
 
     ~ brain-progression
 
-brain-even 
+brain-even [![asciicast](https://asciinema.org/a/h4xA0zuAU9i9JCovez4PhAmoU.svg)](https://asciinema.org/a/h4xA0zuAU9i9JCovez4PhAmoU) 
 
 brain-calc 
 
