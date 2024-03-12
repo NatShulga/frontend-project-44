@@ -31,11 +31,11 @@ const primeGame = () => {
       console.log("Incorrect!");
     }
     askQuestion();
-  }
+  } console.log(`Congratulations, ${name}!`);
 
   askQuestion();
 
-  console.log(`Congratulations, ${name}!`);
+  
 };
 
 primeGame();
