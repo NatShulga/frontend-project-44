@@ -19,12 +19,13 @@ const primeGame = () => {
   console.log(`Hello, ${name}!`);
   console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
 
+  //функция определяющая раунд игры
   const playRound = () => {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Question: ${randomNumber}`);
     const userAnswer = readlineSync.question("Your answer: ");
     
-    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
+    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";//определяем правильный ответ
     
     if (userAnswer.toLowerCase() === correctAnswer) {
       console.log("Correct!");
@@ -37,14 +38,14 @@ const primeGame = () => {
   };
 
   let wrongAnswersCount = 0;
-while (wrongAnswersCount < 3) {
+while (wrongAnswersCount < 3) { //повтор райнда если счетчик неправильных ответов меньше 3х
 if (!playRound()) {
 ++wrongAnswersCount;
 }
 }
 
 if (wrongAnswersCount === 0) {
-console.log(`Congratulations, ${name}!`);
+console.log(`Congratulations, ${name}!`);// если колличество неправильных ответов ровно 0, то Congratulations. 
 }
 };
 
