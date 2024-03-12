@@ -36,17 +36,16 @@ const primeGame = () => {
     }
   };
 
-  let correctAnswersCount = 3;
-  while (correctAnswersCount > 0) {
-    if (!playRound()) {
-      correctAnswersCount = 3;
-    } else {
-    correctAnswersCount++;
-    }
-  }
-  if (correctAnswersCount === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  let wrongAnswersCount = 0;
+while (wrongAnswersCount < 3) {
+if (!playRound()) {
+++wrongAnswersCount;
+}
+}
+
+if (wrongAnswersCount === 3) {
+console.log(`Congratulations, ${name}!`);
+}
 };
 
 export default primeGame;
