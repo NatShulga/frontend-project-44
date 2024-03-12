@@ -22,20 +22,18 @@ const primeGame = () => {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Question: ${randomNumber}`);
     const answer = readlineSync.question("Your answer: ");
-    const isAnswerCorrect = (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
-      (!isPrime(randomNumber) && answer.toLowerCase() === "no");
-    return isAnswerCorrect;
-  }
-
-  let correctAnswersCount = 0;
-  while (correctAnswersCount < 3) {
-    if (askQuestion()) {
-      correctAnswersCount++;
+    if (
+      (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
+      (!isPrime(randomNumber) && answer.toLowerCase() === "no")
+    ) {
       console.log("Correct!");
     } else {
       console.log("Incorrect!");
     }
+    askQuestion();
   }
+
+  askQuestion();
 
   console.log(`Congratulations, ${name}!`);
 };
