@@ -16,28 +16,24 @@ const primeGame = () => {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${name}!`);
-  console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+  console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
   function askQuestion() {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Question: ${randomNumber}`);
     const answer = readlineSync.question("Your answer: ");
-    if (
-      (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
-      (!isPrime(randomNumber) && answer.toLowerCase() === "no")
-    ) {
-      console.log("Correct!");
-      return true;
-    } else {
-      console.log("Incorrect!");
-      return false;
-    }
+    const isAnswerCorrect = (isPrime(randomNumber) && answer.toLowerCase() === "yes") ||
+      (!isPrime(randomNumber) && answer.toLowerCase() === "no");
+    return isAnswerCorrect;
   }
 
   let correctAnswersCount = 0;
   while (correctAnswersCount < 3) {
     if (askQuestion()) {
       correctAnswersCount++;
+      console.log("Correct!");
+    } else {
+      console.log("Incorrect!");
     }
   }
 
@@ -46,4 +42,4 @@ const primeGame = () => {
 
 primeGame();
 
-export default primeGame;
+export default primeGame; 
