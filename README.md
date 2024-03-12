@@ -35,12 +35,12 @@ Games launch commands:
 
 brain-even [![asciicast](https://asciinema.org/a/h4xA0zuAU9i9JCovez4PhAmoU.svg)](https://asciinema.org/a/h4xA0zuAU9i9JCovez4PhAmoU) 
 
-brain-calc 
+brain-calc [![asciicast](https://asciinema.org/a/nEVKVkSpkgi5Pn8B70u78T4n3.svg)](https://asciinema.org/a/nEVKVkSpkgi5Pn8B70u78T4n3)
 
-brain-gcd  
+brain-gcd  [![asciicast](https://asciinema.org/a/uP8GfgKE542rgNr3bGT9b9q2Q.svg)](https://asciinema.org/a/uP8GfgKE542rgNr3bGT9b9q2Q)
 
-brain-progression  
+brain-progression  [![asciicast](https://asciinema.org/a/P09jM7pQbBDURinMDFar2xXNa.svg)](https://asciinema.org/a/P09jM7pQbBDURinMDFar2xXNa)
 
-brain-prime 
+brain-prime [![asciicast](https://asciinema.org/a/ADaTTgr7ZY3EpLgVoOIESVa3h.svg)](https://asciinema.org/a/ADaTTgr7ZY3EpLgVoOIESVa3h)
 
 
