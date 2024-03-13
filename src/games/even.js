@@ -13,7 +13,6 @@ const isEven = (num) => {
   return result;
 };
 
-
 const getQuestionAndAnswer = () => {
   const number = getNumber(1, 20);
   const question = number;
