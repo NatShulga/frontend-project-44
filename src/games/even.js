@@ -1,34 +1,36 @@
-import readlineSync from "readline-sync";
+import playCalcGame from '../games/index.js;'
 
-console.log("Welcome to the Brain Games!");
-const name = readlineSync.question("May I have your name? ");
-console.log(`Hello, ${name}!`);
-console.log("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+//import readlineSync from 'readline-sync';
 
-let correctCount = 0;
+import { getNumber } from '../randomsnum.js';
 
-while (correctCount < 3) {
-  const randomNumber = Math.floor(Math.random() * 20) + 1;
-  console.log(`Question: ${randomNumber}`);
-  const userAnswer = readlineSync.question("Your answer: ");
 
-  const isEven = randomNumber % 2 === 0;
-  const correctAnswer = isEven ? "yes" : "no";
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  if (userAnswer === correctAnswer) {
-    console.log("Correct!");
-    correctCount++;
-  } else {
-    console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-    );
-    console.log(`Let's try again, ${name}!`);
-    break;
-  }
-}
+// Функция для проверки чётности числа
+const isEven = (num) => num % 2 === 0;
 
-if (correctCount === 3) {
-  console.log(`Congratulations, ${name}!`);
-}
+// Функция для генерации случайного числа от 1 до 100
+//const getNumber = () => Math.floor(Math.random() * 100) + 1;
+//console.log("Welcome to the Brain Games!");
+//const name = readlineSync.question("May I have your name? ");
+//console.log(`Hello, ${name}!`);
+//console.log("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
-export default() => {};
+// Функция для задания вопроса и обработки ответа 
+const playRound = () => {
+  const number = getNumber(1, 100);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  return [number, correctAnswer];
+};
+
+export default () => {
+  playCalcGame(playRound, description);
+};
+
+
+
+//export default () => {
+  //playCalcGame(description, playRound());
+//};
+

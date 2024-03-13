@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
-import playBrainProgression from '../src/games/progression.js';
+import getProgression from '../src/games/progression.js';
 
-playBrainProgression();
+getProgression();
 
-import readlineSync from '../src/games/progression.js';
-
-readlineSync;

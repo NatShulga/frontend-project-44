@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-import readlineSync from '../src/games/even.js';
+import playRound from '../src/games/even.js';
 
-readlineSync;
+playRound();
+
+import playCalcGame from '../src/games/index.js';
+
+playCalcGame();
