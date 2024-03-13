@@ -6,18 +6,22 @@ const description = 'Find the greatest common divisor of given numbers.';
 
 
 // eslint-disable-next-line no-unused-vars
-function getNod (number1, number2) {
-  return (number2 === 0 ? number1 : getNod(number2, number1 % number2));
-}
+const getGcd = (a, b) => {
+  if (a < b) return getGcd(b, a);
+  if (b === 0) return a;
+  return getGcd(b, a % b);
+};
 
-function playRound() {
-  const number1 = getNumber(1, 100);
-  const number2 = getNumber(1, 100);
-  const answer = getNumber(number1, number2);
-  const expression = `${number1} ${number2}`;
-  return [expression, String(answer)];
-}
+const getQuestionAndAnswer = () => {
+  const number1 = getNumber(1, 20);
+  const number2 = getNumber(1, 20);
+
+  const question = `${number1} ${number2}`;
+  const result = getGcd(number1, number2).toString();
+
+  return [question, result];
+};
 
 export default () => {
-  mainFun(playRound, description);
+  mainFun(description, getQuestionAndAnswer);
 };

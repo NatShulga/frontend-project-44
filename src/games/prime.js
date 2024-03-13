@@ -1,34 +1,43 @@
-import mainFun from '../index.js';
+import mainFun from "../index.js";
 
-import { getNumber, getIndex } from '../randomsnum.js';
+import readlineSync from "readline-sync";
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+import { getNumber } from "../randomsnum.js";
 
-const isPrime = (number) => {
-  if (number < 2) {
+const description =
+  'Answer "yes" if given number is prime. Otherwise answer "no".'; //простое ли число
+
+const isPrime = (num) => {
+  if (num < 2) {
     return false;
   }
-  for (let i = 2; i <= Math.sqrt(number); i += 1) {
-    if (number % i === 0) {
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) {
       return false;
     }
   }
   return true;
 };
-const getRandomPrime = () => {
-  let num = 0;
-  while (!isPrime(num)) {
-    num = getNumber(0, 10000);
+
+const primeGame = () => {
+  function askQuestion() {
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    console.log(`Question: ${randomNumber}`);
+    const answer = readlineSync.question("Your answer: ");
+    if (
+      (isPrime(getNumber) && answer.toLowerCase() === "yes") ||
+      (!isPrime(getNumber) && answer.toLowerCase() === "no")
+    ) {
+      console.log("Correct!");
+    } else {
+      console.log("Incorrect!");
+    }
+    askQuestion();
   }
-  return num;
+
+  askQuestion();
 };
-const playRound = () => {
-  const variant = [getNumber(0, 1000), getRandomPrime()];
-  const neededNum = variant[getIndex(variant)];
-  const question = neededNum;
-  const correctAnswer = isPrime(neededNum) ? 'yes' : 'no';
-  return [question, correctAnswer];
-};
+
 export default () => {
-  mainFun(playRound, description);
+  mainFun(description, primeGame);
 };

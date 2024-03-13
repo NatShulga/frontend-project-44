@@ -1,29 +1,30 @@
-import mainFun from '../index.js;'
+import mainFun from "../index.js;";
 
-import { getNumber, getIndex } from '../randomsnum.js';
+import { getNumber, getIndex } from "../randomsnum.js";
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = "What number is missing in the progression?"; //арифметическая прогрессия
 
-
-const getProgression = (start, length, step) => {
-  const progression = [];
-  for (let i = start; progression.length < length; i += step) {
-    progression.push(i);
+const getProgression = (startNumber, length, step) => {
+  let currentNumber = startNumber;
+  const result = [startNumber];
+  for (let i = 0; i < length; i += 1) {
+    currentNumber += step;
+    result.push(currentNumber);
   }
-  return progression;
+  return result;
 };
-const playRound = () => {
-  const start = getNumber(0, 100);
-  const length = getNumber(5, 10);
-  const step = getNumber(1, 10);
-  const progression = getProgression(start, length, step);
-  const indexMissingNumber = getIndex(progression);
-  const correctAnswer = progression[indexMissingNumber].toString();
-  progression[indexMissingNumber] = '..';
-  const question = progression.join(' ');
-  return [question, correctAnswer];
+const generateRound = () => {
+  const progressionLength = getNumber(5, 9);
+  const progressionStep = getNumber(2, 10);
+  const firstNumber = getNumber(1, 100);
+  const progression = getProgression(firstNumber, progressionLength, progressionStep);
+  const randomElement = getIndex(0, progression.length - 1);
+  const answer = progression[randomElement];
+  progression.splice(randomElement, 1, '..');
+  const expression = progression.join(' ');
+  return [expression, String(answer)];
 };
 
 export default () => {
-  mainFun(playRound, description);
+  mainFun(description, generateRound);
 };
