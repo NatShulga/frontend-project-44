@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 
 
-
 const mainFun = (description, exercise) => {
     console.log('Welcome to the Brain Games!');
   
@@ -33,4 +32,8 @@ const mainFun = (description, exercise) => {
     console.log(`Congratulations, ${userName}!`);
   };
   
-  export default mainFun;
+  const exerciseFunction = () => {
+    
+  };
+
+  export default mainFun(exerciseFunction);

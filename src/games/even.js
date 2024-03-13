@@ -1,4 +1,4 @@
-import mainFun from '../games/index.js;'
+import mainFun from '../index.js';
 
 //import readlineSync from 'readline-sync';
 

@@ -1,4 +1,4 @@
-import playCalcGame from '../index.js';
+import mainFun from '../index.js';
 
 import { getNumber, getIndex } from '../randomsnum.js';
 
@@ -30,5 +30,5 @@ const playRound = () => {
   return [question, correctAnswer];
 };
 export default () => {
-  playCalcGame(playRound, description);
+  mainFun(playRound, description);
 };
