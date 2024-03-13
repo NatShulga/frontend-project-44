@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import getProgression from '../src/games/progression.js';
+import primeGame from '../src/games/prime.js';
 
-getProgression();
+primeGame();
 

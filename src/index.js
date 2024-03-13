@@ -32,8 +32,6 @@ const mainFun = (description, exercise) => {
     console.log(`Congratulations, ${userName}!`);
   };
   
-  const exerciseFunction = () => {
-    
-  };
+  //const exerciseFunction = () => {};
 
-  export default mainFun(exerciseFunction);
+  export default mainFun;

@@ -1,4 +1,4 @@
-import playCalcGame from '../games/index.js';
+import mainFun from '../index.js';
 
 import { getNumber, getIndex } from '../randomsnum.js';
 
@@ -25,5 +25,5 @@ const generateRound = () => {
   return [expression, String(answer)];
 };
 
-export default () => playCalcGame(description, generateRound);
+export default () => mainFun(description, generateRound);
 
