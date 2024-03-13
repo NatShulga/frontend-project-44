@@ -13,15 +13,20 @@ const getProgression = (startNumber, length, step) => {
   }
   return result;
 };
+
 const generateRound = () => {
   const progressionLength = getNumber(5, 9);
   const progressionStep = getNumber(2, 10);
   const firstNumber = getNumber(1, 100);
-  const progression = getProgression(firstNumber, progressionLength, progressionStep);
+  const progression = getProgression(
+    firstNumber,
+    progressionLength,
+    progressionStep
+  );
   const randomElement = getIndex(0, progression.length - 1);
   const answer = progression[randomElement];
-  progression.splice(randomElement, 1, '..');
-  const expression = progression.join(' ');
+  progression[randomElement] = "..";
+  const expression = progression.join(" ");
   return [expression, String(answer)];
 };
 
