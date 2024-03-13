@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-import playRound from '../src/games/even.js';
+import evenGame from '../src/index.js';
 
-playRound();
+evenGame();
 
-import playCalcGame from '../src/games/index.js';
 
-playCalcGame();

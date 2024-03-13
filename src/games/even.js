@@ -1,4 +1,4 @@
-import playCalcGame from '../games/index.js;'
+import mainFun from '../games/index.js;'
 
 //import readlineSync from 'readline-sync';
 
@@ -8,29 +8,20 @@ import { getNumber } from '../randomsnum.js';
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // Функция для проверки чётности числа
-const isEven = (num) => num % 2 === 0;
+const isEven = (num) => {
+  const result = (num % 2 === 0);
+  return result;
+};
 
-// Функция для генерации случайного числа от 1 до 100
-//const getNumber = () => Math.floor(Math.random() * 100) + 1;
-//console.log("Welcome to the Brain Games!");
-//const name = readlineSync.question("May I have your name? ");
-//console.log(`Hello, ${name}!`);
-//console.log("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
-// Функция для задания вопроса и обработки ответа 
-const playRound = () => {
-  const number = getNumber(1, 100);
-  const correctAnswer = isEven(number) ? 'yes' : 'no';
-  return [number, correctAnswer];
+const getQuestionAndAnswer = () => {
+  const number = getNumber(1, 20);
+  const question = number;
+  const result = isEven(number) ? 'yes' : 'no';
+  return [question, result];
 };
 
 export default () => {
-  playCalcGame(playRound, description);
+  mainFun(description, getQuestionAndAnswer);
 };
-
-
-
-//export default () => {
-  //playCalcGame(description, playRound());
-//};
 
