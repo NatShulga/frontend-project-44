@@ -1,9 +1,8 @@
 import mainFun from '../index.js';
 
-import { getNumber, getIndex } from "../randomsnum.js";
+import { getNumber, getIndex } from '../randomsnum.js';
 
-
-const description = "What number is missing in the progression?"; //арифметическая прогрессия
+const description = "What number is missing in the progression?"; // арифметическая прогрессия
 
 const getProgression = (startNumber, length, step) => {
   let currentNumber = startNumber;
