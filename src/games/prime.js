@@ -1,10 +1,10 @@
-import mainFun from "../index.js";
+import mainFun from '../index.js';
 
-//import readlineSync from "readline-sync";
+// import readlineSync from "readline-sync";
 
-import { getNumber, getIndex } from "../randomsnum.js";
+import { getNumber, getIndex } from '../randomsnum.js';
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'; //простое ли число
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'; // простое ли число
 
 const isPrime = (num) => {
   if (num < 2) {
