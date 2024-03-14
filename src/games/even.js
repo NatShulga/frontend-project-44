@@ -22,4 +22,3 @@ const getQuestionAndAnswer = () => {
 export default () => {
   mainFun(description, getQuestionAndAnswer);
 };
-
