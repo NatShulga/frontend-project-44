@@ -25,4 +25,3 @@ const generateRound = () => {
 };
 
 export default () => mainFun(description, generateRound);
-
