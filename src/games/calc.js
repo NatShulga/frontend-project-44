@@ -2,7 +2,6 @@ import mainFun from '../index.js';
 
 import { getIndex, getNumber } from '../randomsnum.js';
 
-
 const description = 'What is the result of the expression?';// результат выражения
 
 const operators = ['+', '-', '*'];
