@@ -16,15 +16,15 @@ const getProgression = (startNumber, length, step) => {
 };
 
 const generateRound = () => {
-  const progressionLength = getNumber(5, 9);
-  const progressionStep = getNumber(2, 10);
-  const firstNumber = getNumber(1, 100);
-  const progression = getProgression(firstNumber, progressionLength, progressionStep);
-  const randomElementIndex = getIndex(0, progression.length - 1);
-  const answerCorrect = String(progression[randomElementIndex]);
-  progression[randomElementIndex] = "..";
-  const question = progression.join(" ");
-  return [question, answerCorrect];
+  const start = getNumber(0, 100);
+  const length = getNumber(5, 10);
+  const step = getNumber(1, 10);
+  const progression = getProgression(start, length, step);
+  const indexMissingNumber = getIndex(progression);
+  const correctAnswer = progression[indexMissingNumber].toString();
+  progression[indexMissingNumber] = '..';
+  const question = progression.join(' ');
+  return [question, correctAnswer];
 };
 
 export default () => {
