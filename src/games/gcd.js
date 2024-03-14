@@ -2,7 +2,7 @@ import mainFun from '../index.js'
 
 import { getNumber } from '../randomsnum.js'
 
-const description = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';//наибольший делитель для чисел
 
 
 // eslint-disable-next-line no-unused-vars

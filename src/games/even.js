@@ -5,7 +5,7 @@ import mainFun from '../index.js';
 import { getNumber } from '../randomsnum.js';
 
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';//простое ли число
 
 // Функция для проверки чётности числа
 const isEven = (num) => {
