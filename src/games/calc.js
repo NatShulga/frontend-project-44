@@ -24,5 +24,5 @@ const generateRound = () => {
   return [expression, String(answer)];
 };
 
-export default () => mainFun(description, generateRound); 
+export default () => mainFun(description, generateRound);
 
