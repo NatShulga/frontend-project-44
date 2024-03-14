@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-
 const mainFun = (description, exercise) => {
     console.log('Welcome to the Brain Games!');
   
@@ -10,19 +9,19 @@ const mainFun = (description, exercise) => {
   
     const rounds = 3;
   
-    if (typeof exercise !== 'function') {
+    if(typeof exercise !== 'function') {
       console.log('Error: Exercise is not a function');
       return;
     }
   
-    for (let i = 0; i < rounds; i += 1) {
+    for(let i = 0; i < rounds; i += 1) {
       const questionResult = exercise();
       console.log('Question:', questionResult[0]);
       const answerUser = readlineSync.question('Your answer: ');
   
       const rightAnswer = questionResult[1];
   
-      if (answerUser !== rightAnswer) {
+      if(answerUser !== rightAnswer) {
         console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${userName}!`);
         return;
       } 
@@ -32,6 +31,6 @@ const mainFun = (description, exercise) => {
     console.log(`Congratulations, ${userName}!`);
   };
   
-  //const exerciseFunction = () => {};
+  // const exerciseFunction = () => {};
 
   export default mainFun;
