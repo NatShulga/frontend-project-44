@@ -1,7 +1,8 @@
+// eslint-disable-next-line import/extensions
 import mainFun from '../index.js';
 
+// eslint-disable-next-line import/extensions
 import { getIndex, getNumber } from '../randomsnum.js';
-
 
 const description = 'What is the result of the expression?';// результат выражения
 
@@ -25,5 +26,4 @@ const generateRound = () => {
   return [expression, String(answer)];
 };
 
-export default () => mainFun(description, generateRound); 
-
+export default () => mainFun(description, generateRound);

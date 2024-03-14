@@ -1,11 +1,12 @@
+// eslint-disable-next-line import/extensions
 import mainFun from '../index.js';
 
-//import readlineSync from 'readline-sync';
+// import readlineSync from 'readline-sync';
 
+// eslint-disable-next-line import/extensions
 import { getNumber } from '../randomsnum.js';
 
-
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';//простое ли число
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';// простое ли число
 
 // Функция для проверки чётности числа
 const isEven = (num) => {
@@ -23,4 +24,3 @@ const getQuestionAndAnswer = () => {
 export default () => {
   mainFun(description, getQuestionAndAnswer);
 };
-
