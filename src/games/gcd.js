@@ -11,13 +11,13 @@ const getGcd = (a, b) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const number1 = getNumber(1, 20);
-  const number2 = getNumber(1, 20);
+const number1 = getNumber(1, 20);
+const number2 = getNumber(1, 20);
 
-  const question = `${number1} ${number2}`;
-  const result = getGcd(number1, number2).toString();
+const question = `${number1} ${number2}`;
+const result = getGcd(number1, number2).toString();
 
-  return [question, result];
+return [question, result];
 };
 
 export default () => {
