@@ -5,9 +5,9 @@ import { getNumber } from '../utils.js';
 const description = 'Find the greatest common divisor of given numbers.';// наибольший делитель для чисел
 
 const getGcd = (a, b) => {
-  if (a < b) return getGcd(b, a);
-  if (b === 0) return a;
-  return getGcd(b, a % b);
+if (a < b) return getGcd(b, a);
+if (b === 0) return a;
+return getGcd(b, a % b);
 };
 
 const getQuestionAndAnswer = () => {
