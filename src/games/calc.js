@@ -1,6 +1,6 @@
 import mainFun from '../index.js';
 
-import { getIndex, getNumber } from '../randomsnum.js';
+import { getIndex, getNumber } from '../utils.js';
 
 const description = 'What is the result of the expression?';// результат выражения
 

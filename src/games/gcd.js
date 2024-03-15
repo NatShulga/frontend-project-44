@@ -1,6 +1,6 @@
 import mainFun from '../index.js';
 
-import { getNumber } from '../randomsnum.js';
+import { getNumber } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';// наибольший делитель для чисел
 

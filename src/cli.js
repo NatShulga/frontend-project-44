@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-multiple-empty-lines
-
 import readlineSync from 'readline-sync';
 
 export default function greetUser() {

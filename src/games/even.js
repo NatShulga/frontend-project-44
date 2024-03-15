@@ -1,6 +1,6 @@
 import mainFun from '../index.js';
 
-import { getNumber } from '../randomsnum.js';
+import { getNumber } from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';// проверка на четность
 
