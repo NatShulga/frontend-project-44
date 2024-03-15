@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+// eslint-disable-next-line no-multiple-empty-lines
+
 import readlineSync from 'readline-sync';
 
 const mainFun = (description, exercise) => {
@@ -43,41 +44,3 @@ const mainFun = (description, exercise) => {
 // const exerciseFunction = () => {};
 
 export default mainFun;
-=======
-import readlineSync from 'readline-sync';
-
-const mainFun = (description, exercise) => {
-    console.log('Welcome to the Brain Games!');
-    
-    const userName = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${userName}!`);
-    console.log(description);
-    
-    const rounds = 3;
-    
-    if (typeof exercise !== 'function') {
-      console.log('Error: Exercise is not a function');
-      return;
-    }
-    
-    for (let i = 0; i < rounds; i += 1) {
-    const questionResult = exercise();
-    console.log('Question:', questionResult[0]);
-    const answerUser = readlineSync.question('Your answer: ');
-        
-    const rightAnswer = questionResult[1];
-    
-    if (answerUser !== rightAnswer) {
-        console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${userName}!`);
-        return;
-    } 
-    console.log('Correct!');
-    }
-  
-    console.log(`Congratulations, ${userName}!`);
-};
-  
-// const exerciseFunction = () => {};
-
-export default mainFun;
->>>>>>> f5f1f64046a9f5b09dddd15f3bc7c38681279ae9

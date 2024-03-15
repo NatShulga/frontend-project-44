@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // eslint-disable-next-line import/extensions
 import mainFun from '../index.js';
 
@@ -27,31 +26,3 @@ const getQuestionAndAnswer = () => {
 export default () => {
   mainFun(description, getQuestionAndAnswer);
 };
-=======
-import mainFun from '../index.js';
-
-import { getNumber } from '../randomsnum.js';
-
-const description = 'Find the greatest common divisor of given numbers.';// наибольший делитель для чисел
-
-// eslint-disable-next-line no-unused-vars
-const getGcd = (a, b) => {
-  if (a < b) return getGcd(b, a);
-  if (b === 0) return a;
-  return getGcd(b, a % b);
-};
-
-const getQuestionAndAnswer = () => {
-  const number1 = getNumber(1, 20);
-  const number2 = getNumber(1, 20);
-
-  const question = `${number1} ${number2}`;
-  const result = getGcd(number1, number2).toString();
-
-  return [question, result];
-};
-
-export default () => {
-  mainFun(description, getQuestionAndAnswer);
-};
->>>>>>> f5f1f64046a9f5b09dddd15f3bc7c38681279ae9
