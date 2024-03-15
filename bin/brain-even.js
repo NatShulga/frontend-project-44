@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
+/* eslint-disable import/no-named-as-default-member */
 
-// eslint-disable-next-line import/extensions
+// eslint-disable-next-line import/extensions, import/no-named-as-default
 import evenGame from '../src/games/even.js';
 
 evenGame();
-=======
-#!/usr/bin/env node
-
-import evenGame from '../src/games/even.js';
-
-evenGame();
->>>>>>> f5f1f64046a9f5b09dddd15f3bc7c38681279ae9
