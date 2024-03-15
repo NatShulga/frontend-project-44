@@ -1,14 +1,8 @@
-// eslint-disable-next-line no-multiple-empty-lines
-
-// eslint-disable-next-line import/extensions
 import mainFun from '../index.js';
 
-// import readlineSync from "readline-sync";
-
-// eslint-disable-next-line import/extensions
 import { getNumber, getIndex } from '../randomsnum.js';
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'; // простое ли число
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'; // проверка на четность
 
 const isPrime = (num) => {
   if (num < 2) {

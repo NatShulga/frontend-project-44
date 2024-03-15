@@ -1,9 +1,5 @@
-// eslint-disable-next-line no-multiple-empty-lines
-
-// eslint-disable-next-line import/extensions
 import mainFun from '../index.js';
 
-// eslint-disable-next-line import/extensions
 import { getNumber, getIndex } from '../randomsnum.js';
 
 const description = 'What number is missing in the progression?'; // арифметическая прогрессия

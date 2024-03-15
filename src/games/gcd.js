@@ -1,12 +1,9 @@
-// eslint-disable-next-line import/extensions
 import mainFun from '../index.js';
 
-// eslint-disable-next-line import/extensions
 import { getNumber } from '../randomsnum.js';
 
 const description = 'Find the greatest common divisor of given numbers.';// наибольший делитель для чисел
 
-// eslint-disable-next-line no-unused-vars
 const getGcd = (a, b) => {
   if (a < b) return getGcd(b, a);
   if (b === 0) return a;

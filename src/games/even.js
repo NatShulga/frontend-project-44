@@ -1,9 +1,5 @@
-// eslint-disable-next-line import/extensions
 import mainFun from '../index.js';
 
-// import readlineSync from 'readline-sync';
-
-// eslint-disable-next-line import/extensions
 import { getNumber } from '../randomsnum.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';// проверка на четность

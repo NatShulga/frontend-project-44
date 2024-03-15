@@ -1,6 +1,5 @@
 import mainFun from '../index.js';
 
-// eslint-disable-next-line import/extensions
 import { getIndex, getNumber } from '../randomsnum.js';
 
 const description = 'What is the result of the expression?';// результат выражения
