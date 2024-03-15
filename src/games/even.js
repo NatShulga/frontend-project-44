@@ -6,7 +6,7 @@ import mainFun from '../index.js';
 // eslint-disable-next-line import/extensions
 import { getNumber } from '../randomsnum.js';
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';// простое ли число
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';// проверка на четность
 
 // Функция для проверки чётности числа
 const isEven = (num) => {
