@@ -1,6 +1,6 @@
 import mainFun from '../index.js';
 
-import { getNumber, getIndex } from '../utils.js';
+import { generateRandomNumber, generateRandomIndex } from '../utils.js';
 
 const description = 'What number is missing in the progression?'; // арифметическая прогрессия
 
@@ -15,11 +15,11 @@ const getProgression = (startNumber, length, step) => {
 };
 
 const generateRound = () => {
-  const start = getNumber(0, 100);
-  const length = getNumber(5, 10);
-  const step = getNumber(1, 10);
+  const start = generateRandomNumber(0, 100);
+  const length = generateRandomNumber(5, 10);
+  const step = generateRandomNumber(1, 10);
   const progression = getProgression(start, length, step);
-  const indexMissingNumber = getIndex(progression);
+  const indexMissingNumber = generateRandomIndex(progression);
   const correctAnswer = progression[indexMissingNumber].toString();
   progression[indexMissingNumber] = '..';
   const question = progression.join(' ');

@@ -1,6 +1,6 @@
 import mainFun from '../index.js';
 
-import { getNumber } from '../utils.js';
+import { generateRandomNumber } from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';// проверка на четность
 
@@ -11,7 +11,7 @@ const isEven = (num) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const number = getNumber(1, 20);
+  const number = generateRandomNumber(1, 20);
   const question = number;
   const result = isEven(number) ? 'yes' : 'no';
   return [question, result];

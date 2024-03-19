@@ -1,6 +1,6 @@
 import mainFun from '../index.js';
 
-import { getNumber, getIndex } from '../utils.js';
+import { generateRandomNumber, generateRandomIndex } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'; // проверка на четность
 
@@ -19,13 +19,13 @@ const isPrime = (num) => {
 const getRandomPrime = () => {
   let num = 0;
   while (!isPrime(num)) {
-    num = getNumber(0, 10000);
+    num = generateRandomNumber(0, 10000);
   }
   return num;
 };
 const primeGame = () => {
-  const variant = [getNumber(0, 100), getRandomPrime()];
-  const neededNum = variant[getIndex(variant)];
+  const variant = [generateRandomNumber(0, 100), getRandomPrime()];
+  const neededNum = variant[generateRandomIndex(variant)];
   const question = neededNum;
   const correctAnswer = isPrime(neededNum) ? 'yes' : 'no';
   return [question, correctAnswer];
