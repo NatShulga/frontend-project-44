@@ -1,6 +1,6 @@
 import mainFun from '../index.js';
 
-import { getIndex, getNumber } from '../utils.js';
+import { generateRandomIndex, generateRandomNumber } from '../utils.js';
 
 const description = 'What is the result of the expression?';// результат выражения
 
@@ -16,9 +16,9 @@ const calc = (number1, operator, number2) => {
 };
 
 const generateRound = () => {
-  const number1 = getNumber(0, 10);
-  const number2 = getNumber(0, 10);
-  const chosenOperator = operators[getIndex(operators)];
+  const number1 = generateRandomNumber(0, 10);
+  const number2 = generateRandomNumber(0, 10);
+  const chosenOperator = operators[generateRandomIndex(operators)];
   const answer = calc(number1, chosenOperator, number2);
   const expression = `${number1} ${chosenOperator} ${number2}`;
   return [expression, String(answer)];
